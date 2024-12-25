@@ -1,20 +1,20 @@
 package cc.kelompok22.temperatureconvserver.dto;
 
 public class TemperatureConversionResponseDto {
-    private double convertedValue;
+    private double converted_value;
     private String message;
 
-    public TemperatureConversionResponseDto(double convertedValue, String message) {
-        this.convertedValue = convertedValue;
+    public TemperatureConversionResponseDto(double converted_value, String message) {
+        this.converted_value = converted_value;
         this.message = message;
     }
 
-    public double getConvertedValue() {
-        return convertedValue;
+    public double getConverted_value() {
+        return converted_value;
     }
 
-    public void setConvertedValue(double convertedValue) {
-        this.convertedValue = convertedValue;
+    public void setConverted_value(double converted_value) {
+        this.converted_value = converted_value;
     }
 
     public String getMessage() {

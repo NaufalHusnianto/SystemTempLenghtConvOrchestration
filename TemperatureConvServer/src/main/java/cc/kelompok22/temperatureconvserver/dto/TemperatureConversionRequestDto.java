@@ -2,8 +2,8 @@ package cc.kelompok22.temperatureconvserver.dto;
 
 public class TemperatureConversionRequestDto {
     private double value;
-    private String fromUnit;
-    private String toUnit;
+    private String from;
+    private String to;
 
     public double getValue() {
         return value;
@@ -13,19 +13,19 @@ public class TemperatureConversionRequestDto {
         this.value = value;
     }
 
-    public String getFromUnit() {
-        return fromUnit;
+    public String getFrom() {
+        return from;
     }
 
-    public void setFromUnit(String fromUnit) {
-        this.fromUnit = fromUnit;
+    public void setFrom(String from) {
+        this.from = from;
     }
 
-    public String getToUnit() {
-        return toUnit;
+    public String getTo() {
+        return to;
     }
 
-    public void setToUnit(String toUnit) {
-        this.toUnit = toUnit;
+    public void setTo(String to) {
+        this.to = to;
     }
 }

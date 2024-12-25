@@ -20,8 +20,8 @@ public class TemperatureConversionController {
         try {
             double convertedValue = conversionService.convertTemperature(
                     request.getValue(),
-                    request.getFromUnit(),
-                    request.getToUnit()
+                    request.getFrom(),
+                    request.getTo()
             );
 
             TemperatureConversionResponseDto response = new TemperatureConversionResponseDto(
@@ -32,6 +32,10 @@ public class TemperatureConversionController {
             return ResponseEntity.ok(response);
         } catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest().body(
+                    new TemperatureConversionResponseDto(0, e.getMessage())
+            );
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body(
                     new TemperatureConversionResponseDto(0, e.getMessage())
             );
         }
