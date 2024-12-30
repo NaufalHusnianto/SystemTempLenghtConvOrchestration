@@ -1,4 +1,5 @@
 
+
 # Temperature and Length Conversion Orchestration
 
 This project is a Spring Boot microservices application that provides REST APIs to convert temperature and length measurements. The application utilizes Eureka for service discovery and a gateway server for centralized API routing.
@@ -10,8 +11,8 @@ This project is a Spring Boot microservices application that provides REST APIs 
 
 ## Features
 
-- Convert temperature between Celsius, Fahrenheit, and Kelvin.
-- Convert lengths between meters, kilometers, miles, and feet.
+- Convert temperature between Celsius, Fahrenheit, Reamur, and Kelvin.
+- Convert lengths between Meter, Inci, Kilometer.
 - RESTful API endpoints for integration with other applications.
 - Microservices architecture for scalability and fault tolerance.
 
@@ -25,8 +26,8 @@ This project is a Spring Boot microservices application that provides REST APIs 
 
 1. **Eureka Server**: Handles service discovery and registration.
 2. **Gateway Server**: Routes client requests to appropriate microservices.
-3. **Length Conversion Service (lengthconvserver1, lengthconvserver2)**: Provides APIs for length conversion.
-4. **Temperature Conversion Service (tempconvserver1, tempconvserver2)**: Provides APIs for temperature conversion.
+3. **Length Conversion Service (`LengthConvServer Instance 1`, `LengthConvServer Instance 2`)**: Provides APIs for length conversion.
+4. **Temperature Conversion Service (`TemperatureConvServer Instance 1`, `TemperatureConvServer Instance 2`)**: Provides APIs for temperature conversion.
 
 ## Installation
 
@@ -86,7 +87,7 @@ The Gateway Server routes requests to the appropriate microservices based on the
 
 #### POST `/api/convert-temp`
 
-Example convert temperature between Celsius, Fahrenheit, and Kelvin.
+Example convert temperature between Celsius, Fahrenheit, Reamur, and Kelvin.
 
 **Request Body:**
 ```json
@@ -109,7 +110,7 @@ Example convert temperature between Celsius, Fahrenheit, and Kelvin.
 
 #### POST `/api/convert-length`
 
-Example convert length between meters, kilometers, miles, and feet.
+Example convert length between Meter, Inci, Kilometer.
 
 **Request Body:**
 ```json
