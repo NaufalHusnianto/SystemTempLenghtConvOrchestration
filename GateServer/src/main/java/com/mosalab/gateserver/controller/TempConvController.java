@@ -11,13 +11,12 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
-public class LengthConversionController {
-
+public class TempConvController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @PostMapping("/convert-length")
-    public ResponseEntity<?> convertLength(@RequestBody Map<String, Object> request) {
+    @PostMapping("/convert-temp")
+    public ResponseEntity<?> convertTemp(@RequestBody Map<String, Object> request) {
         if (request == null || !request.containsKey("from") || !request.containsKey("to") || !request.containsKey("value")) {
             Map<String, Object> errorResponse = new HashMap<>();
             errorResponse.put("error", "Invalid Request");
@@ -26,7 +25,8 @@ public class LengthConversionController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
         }
 
-        String serviceUrl = "http://LengthConvServer/hit";
+        String serviceUrl = "http://TemperatureConvServer/hit";
+
         try {
             ResponseEntity<Map> response = restTemplate.postForEntity(serviceUrl, request, Map.class);
 
